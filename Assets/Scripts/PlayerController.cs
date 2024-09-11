@@ -48,17 +48,13 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Jump") && GroundCheck()) {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * Gravity);
         }
-        
-        Debug.Log("is Grounded: " + GroundCheck());
-        Debug.Log("Jump pressed: " + Input.GetButtonDown("Jump"));
-        
+
         playerVelocity.y += Gravity * Time.deltaTime;
         charController.Move(playerVelocity * Time.deltaTime);
     }
 
     private bool GroundCheck() {
         Transform originTransform = raycastOrigin.transform;
-
         return Physics.Raycast(originTransform.position, -originTransform.up, 0.05f);
     }
 }
