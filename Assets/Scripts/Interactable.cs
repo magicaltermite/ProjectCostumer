@@ -27,6 +27,7 @@ public class Interactable : MonoBehaviour {
         onInteraction.Invoke();
     }
 
+
     public void SetOutlineEnabled(bool isEnabled) {
         outline.enabled = isEnabled;
     }

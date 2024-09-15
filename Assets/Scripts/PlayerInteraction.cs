@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Managers;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour {
     [SerializeField] private float playerReach;
@@ -12,7 +13,17 @@ public class PlayerInteraction : MonoBehaviour {
     private Camera mainCamera;
 
     private int layerMask;
-    
+
+    [SerializeField]
+    public GameObject clue1;
+    [SerializeField]
+    public GameObject clue1Menu;
+
+    [SerializeField]
+    public GameObject smallPanels;
+    [SerializeField]
+    public GameObject menuPanels;
+    public bool menuOpen = false; 
 
     private void Start() {
         mainCamera = Camera.main;
@@ -22,7 +33,23 @@ public class PlayerInteraction : MonoBehaviour {
     private void Update() {
         CheckInteraction();
         if (Input.GetKeyDown(KeyCode.F) && currentInteractable != null) {
+            clue1.GetComponent<Image>().color = Color.red;
+            clue1Menu.GetComponent<Image>().color = Color.red;
             currentInteractable.Interact();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab) && menuOpen == false)
+        {
+            Debug.Log("Tab pressed");
+            menuPanels.SetActive(true);
+            smallPanels.SetActive(false);
+            menuOpen = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.Tab) && menuOpen == true)
+        {
+            smallPanels.SetActive(true);
+            menuPanels.SetActive(false);
+            menuOpen = false;
         }
     }
 
