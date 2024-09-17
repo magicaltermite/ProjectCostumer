@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour {
     
     [SerializeField] private GameObject cameraTarget;
     [SerializeField] private float distanceFromTarget = 6.0f;
+    [SerializeField] private float cameraHeight = -6.0f;
 
     [SerializeField] private float smoothTime = 0.2f;
     
@@ -47,6 +48,6 @@ public class CameraController : MonoBehaviour {
     }
 
     private void PositionCamera() {
-        thisTransform.position = cameraTarget.transform.position - transform.forward * distanceFromTarget;
+        thisTransform.position = cameraTarget.transform.position - transform.forward * distanceFromTarget - transform.up * cameraHeight;
     }
 }

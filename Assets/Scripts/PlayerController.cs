@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour {
             transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
         }
         
+        Debug.Log(GroundCheck());
         if (Input.GetButtonDown("Jump") && GroundCheck()) {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * Gravity);
         }
@@ -55,6 +56,6 @@ public class PlayerController : MonoBehaviour {
 
     private bool GroundCheck() {
         Transform originTransform = raycastOrigin.transform;
-        return Physics.Raycast(originTransform.position, -originTransform.up, 0.05f);
+        return Physics.Raycast(originTransform.position, -originTransform.up, 0.5f);
     }
 }
