@@ -188,6 +188,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31aed0c229afc584393e0b487de7ea7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerReach: 10
+  clue1: {fileID: 0}
+  clue1Menu: {fileID: 0}
+  smallPanels: {fileID: 0}
+  menuPanels: {fileID: 0}
+  menuOpen: 0
 --- !u!1 &5099428969235633364
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4779033225861757896}
   m_Layer: 0
-  m_Name: RaycastOrigin
+  m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

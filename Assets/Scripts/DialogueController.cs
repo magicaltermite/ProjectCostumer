@@ -42,8 +42,8 @@ public class DialogueController : MonoBehaviour {
 
     private void StartDialogue() {
         string dialogueContents;
-        const string path = "Assets/Dialogue/TestDialogue.txt";
-
+        string path = Application.streamingAssetsPath + "/Dialogue/TestDialogue.txt";
+        
         try {
             using StreamReader sr = new StreamReader(path);
             dialogueContents = sr.ReadToEnd();
