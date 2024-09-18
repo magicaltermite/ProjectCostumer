@@ -8,7 +8,8 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Outline))]
 public class Interactable : MonoBehaviour {
-    [SerializeField] private string message;
+    [SerializeField] private DialogueFiles dialogueFile;
+    [SerializeField] private ClueTypes clueType;
     
     private Outline outline;
     public UnityEvent onInteraction;
@@ -28,13 +29,25 @@ public class Interactable : MonoBehaviour {
     }
 
     public void EnableDialogueBox() {
-        UIManager.Instance.EnableDialogueBox(true);
+        UIManager.Instance.EnableDialogueBox(true, dialogueFile.ToString());
     }
 
 
     public void SetOutlineEnabled(bool isEnabled) {
         outline.enabled = isEnabled;
     }
+
+
+    public ClueTypes GetClueType() {
+        return clueType;
+    }
     
-    
+}
+
+public enum DialogueFiles {
+    TestDialogue,
+    PineConeDialogue,
+    BurntLeavesDialogue,
+    CampfireDialogue,
+    VShapedBurnMarkDialogue
 }

@@ -31,21 +31,19 @@ public class PlayerInteraction : MonoBehaviour {
 
     private void Update() {
         CheckInteraction();
+        
         if (Input.GetKeyDown(KeyCode.F) && currentInteractable != null) {
-            clue1.GetComponent<Image>().color = Color.red;
-            clue1Menu.GetComponent<Image>().color = Color.red;
             currentInteractable.Interact();
+            UIManager.Instance.UpdateClueUI(currentInteractable.GetClueType());
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab) && menuOpen == false)
-        {
+        if (Input.GetKeyDown(KeyCode.Tab) && menuOpen == false) {
             Debug.Log("Tab pressed");
             menuPanels.SetActive(true);
             smallPanels.SetActive(false);
             menuOpen = true;
         }
-        else if(Input.GetKeyDown(KeyCode.Tab) && menuOpen == true)
-        {
+        else if(Input.GetKeyDown(KeyCode.Tab) && menuOpen == true) {
             smallPanels.SetActive(true);
             menuPanels.SetActive(false);
             menuOpen = false;
@@ -64,6 +62,7 @@ public class PlayerInteraction : MonoBehaviour {
             if (newInteractable.enabled) {
                 SetNewCurrentInteractable(newInteractable);
                 UIManager.Instance.EnablePickupPrompt(true);
+                Debug.Log("interaction occured");
             }
             else {
                 DisableCurrentInteractable();
@@ -88,5 +87,14 @@ public class PlayerInteraction : MonoBehaviour {
         currentInteractable.SetOutlineEnabled(false);
         currentInteractable = null;
     }
+    
+}
+
+public enum ClueTypes {
+    TestClue,
+    Campfire,
+    BurntLeaves,
+    PineCone,
+    VShapedBurnMark
     
 }

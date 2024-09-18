@@ -13,6 +13,8 @@ public class DialogueController : MonoBehaviour {
 
     private int index;
     private string[] lines;
+    private string filePath;
+    private bool hasStarted; // This is a clunky solution, but I'm having some problems with the dialogue working correctly more than once
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -26,6 +28,7 @@ public class DialogueController : MonoBehaviour {
     private void Start() {
         textBox.text = string.Empty;
         StartDialogue();
+        hasStarted = true;
     }
 
     private void Update() {
@@ -42,10 +45,9 @@ public class DialogueController : MonoBehaviour {
 
     private void StartDialogue() {
         string dialogueContents;
-        string path = Application.streamingAssetsPath + "/Dialogue/TestDialogue.txt";
         
         try {
-            using StreamReader sr = new StreamReader(path);
+            using StreamReader sr = new StreamReader(filePath);
             dialogueContents = sr.ReadToEnd();
         }
         catch (Exception e) {
@@ -78,13 +80,20 @@ public class DialogueController : MonoBehaviour {
             StartCoroutine(TypeLine());
         }
         else {
+            textBox.text = string.Empty;
             gameObject.SetActive(false);
         }
     }
 
 
-    public void PopulateLines(string[] linesToShow) {
+    private void PopulateLines(string[] linesToShow) {
         lines = linesToShow;
+    }
+
+    public void SetDialogueFile(string file) {
+        filePath = Application.streamingAssetsPath + "/Dialogue/" + file + ".txt";
+        if(hasStarted)
+            StartDialogue();
     }
     
 }
