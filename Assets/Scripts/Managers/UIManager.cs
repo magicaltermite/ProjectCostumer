@@ -30,8 +30,6 @@ public class UIManager : MonoBehaviour {
 
     private void Start() {
         pickupPrompt.gameObject.SetActive(false);
-        
-        
     }
 
     public void EnablePickupPrompt(bool isEnabled) {

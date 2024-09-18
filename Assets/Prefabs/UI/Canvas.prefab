@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2790627970136204169}
   - component: {fileID: 2650598594263464644}
   m_Layer: 5
-  m_Name: MenuPanel3
+  m_Name: BurnMarkPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 1118208337883214619}
   - component: {fileID: 7555564451757579216}
   m_Layer: 5
-  m_Name: CluePanel4
+  m_Name: BurnMarkPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 9154534892195498099}
   - component: {fileID: 5512768652651032215}
   m_Layer: 5
-  m_Name: MenuPanel4
+  m_Name: BurntLeavesPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 2188255639463056589}
   - component: {fileID: 8119599346538173300}
   m_Layer: 5
-  m_Name: MenuPanel2
+  m_Name: CampfirePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 9103693524399105608}
   - component: {fileID: 1100377919365924646}
   m_Layer: 5
-  m_Name: CluePanel1
+  m_Name: PineConePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,12 +385,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2669886335591760595}
   m_Layer: 0
-  m_Name: MenuPanels
+  m_Name: BigCluePanels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2669886335591760595
 Transform:
   m_ObjectHideFlags: 0
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 2773696738069578200}
   - component: {fileID: 7921581642111011781}
   m_Layer: 5
-  m_Name: CluePanel3
+  m_Name: BurntLeavesPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 7969496528081881320}
   - component: {fileID: 3963171053482510662}
   m_Layer: 5
-  m_Name: CluePanel2
+  m_Name: CampfirePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -978,7 +978,7 @@ GameObject:
   - component: {fileID: 2832475042410082043}
   - component: {fileID: 5780420285818235005}
   m_Layer: 5
-  m_Name: MenuPanel1
+  m_Name: PineConePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1051,7 +1051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5567229363469298481}
   m_Layer: 0
-  m_Name: SmallPanels
+  m_Name: SmallCluePanels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

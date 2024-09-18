@@ -3872,26 +3872,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1298263754201102050, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: CampfirePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3085757213153909141, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: BurnMarkPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389738152354432460, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: PineConePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575136430074557109, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: BurntLeavesPanel
-      objectReference: {fileID: 0}
     - target: {fileID: 5204090558876013430, guid: 0963c5c4e0613974da81cfad08d24cad,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3992,45 +3972,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5217656621466107128, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: PineConePanel
-      objectReference: {fileID: 0}
     - target: {fileID: 5935287569635340706, guid: 0963c5c4e0613974da81cfad08d24cad,
         type: 3}
-      propertyPath: m_Name
-      value: BigCluePanels
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7088431278501437702, guid: 0963c5c4e0613974da81cfad08d24cad,
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853811841608308688, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954493166560976015, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: BurntLeavesPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8280852588556775677, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: CampfirePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 9196366895164685170, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: BurnMarkPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206738980891239235, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: SmallCluePanels
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
