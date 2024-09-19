@@ -14,7 +14,9 @@ public class UIManager : MonoBehaviour {
     [SerializeField] private Image[] SmallCluePanels;
     [SerializeField] private Image[] BigCluePanels;
 
-    
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject cluesUI;
+    public bool pause = false;
     private GameObject canvas;
     
     public static UIManager Instance { get; private set; }
@@ -27,6 +29,14 @@ public class UIManager : MonoBehaviour {
             Instance = this;
         }
     }
+
+        public void pauseGame(bool isPaused)
+        {
+                pauseMenu.SetActive(isPaused);
+                cluesUI.SetActive(!isPaused);
+                Debug.Log("Game paused");
+                pause = isPaused;
+        }
 
     private void Start() {
         pickupPrompt.gameObject.SetActive(false);

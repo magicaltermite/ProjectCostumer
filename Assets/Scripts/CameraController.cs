@@ -1,3 +1,4 @@
+using Managers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,9 +14,13 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private float cameraHeight = -6.0f;
 
     [SerializeField] private float smoothTime = 0.2f;
+
     [SerializeField] private bool invertX;
     [SerializeField] private bool invertY;
 
+
+
+    public bool pause = false; 
     
     private float rotationX;
     private float rotationY;
@@ -31,8 +36,11 @@ public class CameraController : MonoBehaviour {
     }
 
     private void Update() {
-        PositionCamera();
-        RotateCamera();
+        if (!GameManager.Instance.isPaused) {     
+            PositionCamera();
+            RotateCamera();
+        }
+
     }
 
 
@@ -48,9 +56,8 @@ public class CameraController : MonoBehaviour {
             x = invertX ? -rotationX : rotationX,
             y = invertY ? rotationY : -rotationY
         };
-
+        
         currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
-
         transform.localEulerAngles = currentRotation;
     }
 
