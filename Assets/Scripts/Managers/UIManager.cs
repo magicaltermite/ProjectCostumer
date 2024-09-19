@@ -15,7 +15,6 @@ public class UIManager : MonoBehaviour {
     [SerializeField] private Image[] BigCluePanels;
 
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private GameObject cluesUI;
     public bool pause = false;
     private GameObject canvas;
     
@@ -33,7 +32,6 @@ public class UIManager : MonoBehaviour {
         public void pauseGame(bool isPaused)
         {
                 pauseMenu.SetActive(isPaused);
-                cluesUI.SetActive(!isPaused);
                 Debug.Log("Game paused");
                 pause = isPaused;
         }

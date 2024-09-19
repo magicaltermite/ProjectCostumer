@@ -13,15 +13,7 @@ public class PlayerInteraction : MonoBehaviour {
 
     private int layerMask;
 
-    [SerializeField]
-    public GameObject clue1;
-    [SerializeField]
-    public GameObject clue1Menu;
-
-    [SerializeField]
-    public GameObject smallPanels;
-    [SerializeField]
-    public GameObject menuPanels;
+    
     public bool menuOpen = false; 
 
     private void Start() {
@@ -36,27 +28,7 @@ public class PlayerInteraction : MonoBehaviour {
             currentInteractable.Interact();
             UIManager.Instance.UpdateClueUI(currentInteractable.GetClueType());
         }
-
-        if (Input.GetKeyDown(KeyCode.Tab) && menuOpen == false) {
-            Debug.Log("Tab pressed");
-            menuPanels.SetActive(true);
-            smallPanels.SetActive(false);
-            menuOpen = true;
-        }
-        else if(Input.GetKeyDown(KeyCode.Tab) && menuOpen == true) {
-            smallPanels.SetActive(true);
-            menuPanels.SetActive(false);
-            menuOpen = false;
-        }else if (GameManager.Instance.isPaused)
-        {
-            smallPanels.SetActive(false);
-            menuPanels.SetActive(false);
-        }
-        else if(!GameManager.Instance.isPaused)
-        {
-            smallPanels.SetActive(true);
-            menuPanels.SetActive(false);
-        }
+        
     }
 
     private void CheckInteraction() {
