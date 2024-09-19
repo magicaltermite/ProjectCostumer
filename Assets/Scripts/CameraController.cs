@@ -1,3 +1,4 @@
+using Managers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private float cameraHeight = -6.0f;
 
     [SerializeField] private float smoothTime = 0.2f;
+
+    public bool pause = false; 
     
     private float rotationX;
     private float rotationY;
@@ -28,23 +31,37 @@ public class CameraController : MonoBehaviour {
     }
 
     private void Update() {
-        PositionCamera();
-        RotateCamera();
+        if (!GameManager.Instance.isPaused) {     
+            PositionCamera();
+            RotateCamera();
+        }
+
     }
 
 
     private void RotateCamera() {
-        float mouseX = Input.GetAxis("Mouse X") * verticalSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * horizontalSensitivity;
+        if (GameManager.Instance.isPaused)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * verticalSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * horizontalSensitivity;
+        }
+        else
+        {
+            float mouseX = Input.GetAxis("Mouse X") * verticalSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * horizontalSensitivity;
 
-        rotationY += mouseX;
-        rotationX += mouseY;
-        rotationX = Mathf.Clamp(rotationX, rotationMinMax.x, rotationMinMax.y);
+            rotationY += mouseX;
+            rotationX += mouseY;
+            rotationX = Mathf.Clamp(rotationX, rotationMinMax.x, rotationMinMax.y);
 
-        Vector3 nextRotation = new (rotationX, rotationY);
-        currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
+            Vector3 nextRotation = new(rotationX, rotationY);
+            currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
 
-        transform.localEulerAngles = currentRotation;
+            transform.localEulerAngles = currentRotation;
+        }
+        
+
+        
     }
 
     private void PositionCamera() {

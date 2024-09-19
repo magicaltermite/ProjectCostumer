@@ -49,6 +49,15 @@ public class PlayerInteraction : MonoBehaviour {
             smallPanels.SetActive(true);
             menuPanels.SetActive(false);
             menuOpen = false;
+        }else if (GameManager.Instance.isPaused)
+        {
+            smallPanels.SetActive(false);
+            menuPanels.SetActive(false);
+        }
+        else if(!GameManager.Instance.isPaused)
+        {
+            smallPanels.SetActive(true);
+            menuPanels.SetActive(false);
         }
     }
 

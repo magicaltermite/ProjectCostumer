@@ -1,3 +1,4 @@
+using Managers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,7 +25,11 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        MovePlayer();
+        if (!GameManager.Instance.isPaused)
+        {
+            MovePlayer();
+        }
+        
     }
 
 
