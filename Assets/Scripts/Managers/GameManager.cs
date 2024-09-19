@@ -22,6 +22,15 @@ public class GameManager : MonoBehaviour {
             Instance = this;
         }
     }
+    
+    public void Update() {
+        if (!isPaused && Input.GetKeyDown(KeyCode.Escape)) {
+            Pausing(true);
+        }
+        else if (isPaused && Input.GetKeyDown(KeyCode.Escape)) {
+            Pausing(false);
+        }
+    }
 
     public void IncrementClueCounter() {
         clueCounter++;
@@ -39,37 +48,18 @@ public class GameManager : MonoBehaviour {
         CaptureMouse(captureMouse);
         SceneManager.LoadScene(sceneName);
     }
+
+    public void LoadScene(string sceneName) {
+        SceneManager.LoadScene(sceneName);
+    }
     
-        
-
-   
-
-    public void pausing(bool pausing)
-    {
+    
+    public void Pausing(bool pausing) {
         isPaused = pausing;
-        UIManager.Instance.pauseGame(isPaused);
+        UIManager.Instance.PauseGame(isPaused);
     }
 
-    public void returntoMain()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
 
-    public void Update()
-    {
-            
-
-        if (!isPaused && Input.GetKeyDown(KeyCode.Escape))
-        {
-            pausing(true);
-
-        }
-        else if (isPaused && Input.GetKeyDown(KeyCode.Escape))
-        {
-            pausing(false);
-                
-        }
-    }
 
 
 }

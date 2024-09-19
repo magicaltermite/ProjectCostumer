@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Managers;
@@ -6,7 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    
+    private void Start() {
+        GameManager.Instance.CaptureMouse(false);
+    }
+
     public void startButton()
     {
         GameManager.Instance.LoadScene("Level1", true);

@@ -38,12 +38,12 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-        public void pauseGame(bool isPaused)
-        {
-                pauseMenu.SetActive(isPaused);
-                Debug.Log("Game paused");
-                pause = isPaused;
-        }
+    public void PauseGame(bool isPaused) {
+        pauseMenu.SetActive(isPaused);
+        pause = isPaused;
+    
+        GameManager.Instance.CaptureMouse(!isPaused);
+    }
 
     private void Start() {
         pickupPrompt.gameObject.SetActive(false);
