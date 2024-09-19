@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dcc313f8913bc164890f4e18733ae424
+guid: a915f8992c6685c468e7f99c35541cc0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -16,8 +16,7 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'Hips' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -83,62 +82,7 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: bear(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Cube
-      parentName: bear(Clone)
-      position: {x: -0, y: 0.5629606, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 0.116607875, y: 0.116607875, z: 0.116607875}
-    - name: Cylinder
-      parentName: bear(Clone)
-      position: {x: 0.018630847, y: 0.46415818, z: -0.09238395}
-      rotation: {x: 0.30420098, y: 0, z: -0, w: 0.95260787}
-      scale: {x: 0.008430701, y: 0.008430702, z: 0.001471825}
-    - name: Cylinder.001
-      parentName: bear(Clone)
-      position: {x: 0.018630847, y: 0.4180024, z: -0.118199185}
-      rotation: {x: 0.1418238, y: 0, z: -0, w: 0.98989195}
-      scale: {x: 0.008430701, y: 0.008430702, z: 0.001471825}
-    - name: Cylinder.002
-      parentName: bear(Clone)
-      position: {x: 0.018630847, y: 0.36925048, z: -0.13047454}
-      rotation: {x: 0.08018134, y: 0, z: -0, w: 0.9967803}
-      scale: {x: 0.008430701, y: 0.008430702, z: 0.001471825}
-    - name: Cylinder.003
-      parentName: bear(Clone)
-      position: {x: 0.018630847, y: 0.31643817, z: -0.13429639}
-      rotation: {x: -0.086251125, y: -0.062312845, z: -0.0054053194, w: 0.9943081}
-      scale: {x: 0.008430701, y: 0.008430702, z: 0.001471825}
-    - name: Cylinder.005
-      parentName: bear(Clone)
-      position: {x: -0.0432204, y: 0.4749554, z: -0.08459265}
-      rotation: {x: -0.4431894, y: 0, z: -0, w: 0.896428}
-      scale: {x: -0.0046827975, y: -0.0046827975, z: -0.024655016}
-    - name: Circle
-      parentName: bear(Clone)
-      position: {x: -0, y: 0.5949211, z: -0.07066385}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Circle.001
-      parentName: bear(Clone)
-      position: {x: -0, y: 0.5949211, z: -0.07066385}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Circle.002
-      parentName: bear(Clone)
-      position: {x: -0.0018344056, y: 0.5999751, z: -0.054316998}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Circle.003
-      parentName: bear(Clone)
-      position: {x: 0.09503644, y: 0.44247812, z: -0.09955722}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 1, y: 1, z: 1}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -153,7 +97,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

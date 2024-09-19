@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: bdff5733279624c4f9a7bdd02e42a149
   - enabled: 1
-    path: Assets/Scenes/MarkusTestScene.unity
-    guid: c8aaf829eacc03343afa14b0f0f72a7b
+    path: Assets/Scenes/Level1.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/TestEndScene.unity
+    guid: 68b7549ff16c5384d9d87786b14192ea
   m_configObjects: {}

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
@@ -8,8 +9,7 @@ public class MainMenuController : MonoBehaviour
     
     public void startButton()
     {
-        // Reminder! if you want this to work, remember to set the main menu as scene 0 and the game scene/next scene as scene 1 in the build settings!
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        GameManager.Instance.LoadScene("Level1", true);
     }
 
     public void exitButton()

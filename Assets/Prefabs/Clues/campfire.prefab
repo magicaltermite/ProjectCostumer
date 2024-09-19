@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFile: 3
+  clueType: 1
   onInteraction:
     m_PersistentCalls:
       m_Calls:

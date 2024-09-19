@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour {
     
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject raycastOrigin;
-    
+
     private Vector3 playerVelocity;
     private CharacterController charController;
+    private Animator animator;
+    private static readonly int IsWalking = Animator.StringToHash("isWalking");
 
     private const float Gravity = -9.81f;
     
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         charController = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -33,8 +36,8 @@ public class PlayerController : MonoBehaviour {
             playerVelocity.y = 0f;
         }
         
-        float horizontalMovement = Input.GetAxis("Horizontal");
-        float verticalMovement = Input.GetAxis("Vertical");
+        float horizontalMovement = Input.GetAxisRaw("Horizontal");
+        float verticalMovement = Input.GetAxisRaw("Vertical");
         
         Vector3 movementDirection = Quaternion.Euler(0, mainCamera.transform.eulerAngles.y ,0) *  new Vector3(horizontalMovement, 0, verticalMovement).normalized;
 
@@ -43,6 +46,10 @@ public class PlayerController : MonoBehaviour {
         if (movementDirection != Vector3.zero) {
             Quaternion desiredRotation = Quaternion.LookRotation(movementDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
+            animator.SetBool(IsWalking, true);
+        }
+        else {
+            animator.SetBool(IsWalking, false);
         }
         
         Debug.Log(GroundCheck());
@@ -50,7 +57,7 @@ public class PlayerController : MonoBehaviour {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * Gravity);
         }
 
-        playerVelocity.y += Gravity * Time.deltaTime;
+        playerVelocity.y += Gravity * 2 * Time.deltaTime;
         charController.Move(playerVelocity * Time.deltaTime);
     }
 

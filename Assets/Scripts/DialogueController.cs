@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Managers;
 using TMPro;
 using UnityEngine;
 
@@ -82,6 +83,7 @@ public class DialogueController : MonoBehaviour {
         else {
             textBox.text = string.Empty;
             gameObject.SetActive(false);
+            GameManager.Instance.IncrementClueCounter();
         }
     }
 

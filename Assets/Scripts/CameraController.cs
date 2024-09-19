@@ -13,6 +13,9 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private float cameraHeight = -6.0f;
 
     [SerializeField] private float smoothTime = 0.2f;
+    [SerializeField] private bool invertX;
+    [SerializeField] private bool invertY;
+
     
     private float rotationX;
     private float rotationY;
@@ -41,7 +44,11 @@ public class CameraController : MonoBehaviour {
         rotationX += mouseY;
         rotationX = Mathf.Clamp(rotationX, rotationMinMax.x, rotationMinMax.y);
 
-        Vector3 nextRotation = new (rotationX, rotationY);
+        Vector3 nextRotation = new Vector3 {
+            x = invertX ? -rotationX : rotationX,
+            y = invertY ? rotationY : -rotationY
+        };
+
         currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
 
         transform.localEulerAngles = currentRotation;
