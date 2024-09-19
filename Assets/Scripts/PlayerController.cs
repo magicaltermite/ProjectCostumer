@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     private CharacterController charController;
     private Animator animator;
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
+    private static readonly int IsJumping = Animator.StringToHash("isJumping");
 
     private const float Gravity = -9.81f;
     
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour {
     private void MovePlayer() {
         if (GroundCheck() && playerVelocity.y < 0) {
             playerVelocity.y = 0f;
+            animator.SetBool(IsJumping, false);
         }
         
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
@@ -60,7 +62,10 @@ public class PlayerController : MonoBehaviour {
         Debug.Log(GroundCheck());
         if (Input.GetButtonDown("Jump") && GroundCheck()) {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * Gravity);
+            animator.SetBool(IsJumping, true);
         }
+        
+        
 
         playerVelocity.y += Gravity * 2 * Time.deltaTime;
         charController.Move(playerVelocity * Time.deltaTime);
