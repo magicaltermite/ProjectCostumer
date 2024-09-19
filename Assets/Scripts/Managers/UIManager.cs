@@ -13,6 +13,15 @@ public class UIManager : MonoBehaviour {
     [SerializeField] private Image dialogueBox;
     [SerializeField] private Image[] SmallCluePanels;
     [SerializeField] private Image[] BigCluePanels;
+    
+    [SerializeField] private Slider sensitivityXSlider;
+    [SerializeField] private Slider sensitivityYSlider;
+    [SerializeField] private Toggle invertX;
+    [SerializeField] private Toggle invertY;
+
+    
+    [SerializeField] private CameraController cameraController;
+
 
     [SerializeField] private GameObject pauseMenu;
     public bool pause = false;
@@ -85,6 +94,14 @@ public class UIManager : MonoBehaviour {
             default:
                 throw new Exception("Clue type does not exist");
         }
+    }
+
+    public void ChangeSensitivity() {
+        cameraController.SetCameraSensitivity(sensitivityXSlider.value, sensitivityYSlider.value);
+    }
+
+    public void InvertCamera() {
+        cameraController.SetInvertedCamera(invertX.isOn, invertY.isOn);
     }
     
 }

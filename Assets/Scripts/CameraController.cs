@@ -42,8 +42,7 @@ public class CameraController : MonoBehaviour {
         }
 
     }
-
-
+    
     private void RotateCamera() {
         float mouseX = Input.GetAxis("Mouse X") * verticalSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * horizontalSensitivity;
@@ -63,5 +62,15 @@ public class CameraController : MonoBehaviour {
 
     private void PositionCamera() {
         thisTransform.position = cameraTarget.transform.position - transform.forward * distanceFromTarget - transform.up * cameraHeight;
+    }
+
+    public void SetCameraSensitivity(float x, float y) {
+        horizontalSensitivity = y;
+        verticalSensitivity = x;
+    }
+
+    public void SetInvertedCamera(bool x, bool y) {
+        invertX = x;
+        invertY = y;
     }
 }
