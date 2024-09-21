@@ -76,6 +76,6 @@ public enum ClueTypes {
     Campfire,
     BurntLeaves,
     PineCone,
-    VShapedBurnMark
+    Cigarette
     
 }

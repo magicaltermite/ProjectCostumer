@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,12 +20,31 @@ public class UIManager : MonoBehaviour {
     [SerializeField] private Toggle invertX;
     [SerializeField] private Toggle invertY;
 
+    [SerializeField] public Sprite campFound;
+    [SerializeField] public Sprite cigFound;
+    [SerializeField] public Sprite pineFound;
+    [SerializeField] public Sprite leavesFound; 
     
     [SerializeField] private CameraController cameraController;
 
 
     [SerializeField] private GameObject pauseMenu;
-    public bool pause = false;
+
+    [SerializeField] public GameObject smallCluesObject;
+    [SerializeField] public GameObject bigCluesObject;
+
+    public bool isSmallActive;
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Tab)){
+                smallCluesObject.SetActive(isSmallActive);
+                bigCluesObject.SetActive(!isSmallActive);
+                isSmallActive = !isSmallActive;
+            }
+        }
+
+        public bool pause = false;
     private GameObject canvas;
     
     public static UIManager Instance { get; private set; }
@@ -76,24 +96,25 @@ public class UIManager : MonoBehaviour {
         
         switch (clueType) {
             case ClueTypes.Campfire:
-                currentBigCluePanel.GetComponent<Image>().color = Color.red;
-                currentSmallCluePanel.GetComponent<Image>().color = Color.red;
+                currentBigCluePanel.GetComponent<Image>().sprite = campFound;
+                currentSmallCluePanel.GetComponent<Image>().sprite = campFound;
                 break;
             case ClueTypes.BurntLeaves:
-                currentBigCluePanel.GetComponent<Image>().color = Color.blue;
-                currentSmallCluePanel.GetComponent<Image>().color = Color.blue;
+                currentBigCluePanel.GetComponent<Image>().sprite = leavesFound;
+                currentSmallCluePanel.GetComponent<Image>().sprite = leavesFound;
                 break;
             case ClueTypes.PineCone:
-                currentBigCluePanel.GetComponent<Image>().color = Color.green;
-                currentSmallCluePanel.GetComponent<Image>().color = Color.green;
+                currentBigCluePanel.GetComponent<Image>().sprite = pineFound;
+                currentSmallCluePanel.GetComponent<Image>().sprite = pineFound;
                 break;
-            case ClueTypes.VShapedBurnMark:
-                currentBigCluePanel.GetComponent<Image>().color = Color.yellow;
-                currentSmallCluePanel.GetComponent<Image>().color = Color.yellow;
+            case ClueTypes.Cigarette:
+                currentBigCluePanel.GetComponent<Image>().sprite = cigFound;
+                currentSmallCluePanel.GetComponent<Image>().sprite = cigFound;
                 break;
             default:
                 throw new Exception("Clue type does not exist");
         }
+
     }
 
     public void ChangeSensitivity() {

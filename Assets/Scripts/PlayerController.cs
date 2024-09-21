@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
 
+
     private const float Gravity = -9.81f;
     
 
