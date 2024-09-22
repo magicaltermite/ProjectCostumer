@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour {
     public void PauseGame(bool isPaused) {
         pauseMenu.SetActive(isPaused);
         pause = isPaused;
-    
+        smallCluesObject.SetActive(!isPaused);
         GameManager.Instance.CaptureMouse(!isPaused);
     }
 
