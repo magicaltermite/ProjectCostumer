@@ -60,7 +60,17 @@ public class GameManager : MonoBehaviour {
     }
 
 
-
+    // For controlling the choice in the choice scene
+    public void PickChoice(bool correctChoice) {
+        Debug.Log("Are these buttons being pressed?");
+        if (correctChoice) {
+            UIManager.Instance.EnableDialogueBox(true, "/Dialogue/ChoiceDialogueCorrect.txt");
+            LoadScene("TestEndScene");
+        }
+        else {
+            UIManager.Instance.EnableDialogueBox(true, "/Dialogue/ChoiceDialogueWrong.txt");
+        }
+    }
 
 }
     

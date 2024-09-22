@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupPrompt: {fileID: 0}
   dialogueBox: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  smallCluesObject: {fileID: 0}
+  bigCluesObject: {fileID: 0}
   SmallCluePanels:
   - {fileID: 0}
   - {fileID: 0}
@@ -56,6 +59,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  pauseMenu: {fileID: 0}
-  cluesUI: {fileID: 0}
+  pauseMenuPanels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  campFound: {fileID: 21300000, guid: fdd6fc8aae5bd1148bb1380771c66f6c, type: 3}
+  cigFound: {fileID: 21300000, guid: a06cdf7761362ac45893d9cb9c65d2ca, type: 3}
+  pineFound: {fileID: 21300000, guid: 82318ae57fc63cc41858b00aeb5d98ce, type: 3}
+  leavesFound: {fileID: 21300000, guid: 82d341b36601fbe4c8542aa6e521617b, type: 3}
+  sensitivityXSlider: {fileID: 0}
+  sensitivityYSlider: {fileID: 0}
+  invertX: {fileID: 0}
+  invertY: {fileID: 0}
+  cameraController: {fileID: 0}
+  isSmallActive: 0
   pause: 0

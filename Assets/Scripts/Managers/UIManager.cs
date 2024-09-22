@@ -10,47 +10,49 @@ using UnityEngine.UI;
 namespace Managers {
 public class UIManager : MonoBehaviour {
     
+    public static UIManager Instance { get; private set; }
+    
+    [Header("UI Elements")]
     [SerializeField] private TMP_Text pickupPrompt;
     [SerializeField] private Image dialogueBox;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] public GameObject smallCluesObject;
+    [SerializeField] public GameObject bigCluesObject;
+    
+    [Header("Clue panels")]
     [SerializeField] private Image[] SmallCluePanels;
     [SerializeField] private Image[] BigCluePanels;
     [SerializeField] private Image[] pauseMenuPanels; 
-
-    [SerializeField] private Slider sensitivityXSlider;
-    [SerializeField] private Slider sensitivityYSlider;
-    [SerializeField] private Toggle invertX;
-    [SerializeField] private Toggle invertY;
-
+    
+    [Header("Clue Panel images")]
     [SerializeField] public Sprite campFound;
     [SerializeField] public Sprite cigFound;
     [SerializeField] public Sprite pineFound;
     [SerializeField] public Sprite leavesFound;
-    
+
+    [Header("Option menu slider")]
+    [SerializeField] private Slider sensitivityXSlider;
+    [SerializeField] private Slider sensitivityYSlider;
+    [SerializeField] private Toggle invertX;
+    [SerializeField] private Toggle invertY;
     
     [SerializeField] private CameraController cameraController;
-
-
-    [SerializeField] private GameObject pauseMenu;
-
-    [SerializeField] public GameObject smallCluesObject;
-    [SerializeField] public GameObject bigCluesObject;
-
-
-    public bool isSmallActive;
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Tab)){
-                smallCluesObject.SetActive(isSmallActive);
-                bigCluesObject.SetActive(!isSmallActive);
-                isSmallActive = !isSmallActive;
-            }
-        }
-
-        public bool pause = false;
-    private GameObject canvas;
     
-    public static UIManager Instance { get; private set; }
+    public bool isSmallActive;
+    public bool pause = false;
+    private GameObject canvas;
+
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab)){
+            smallCluesObject.SetActive(isSmallActive);
+            bigCluesObject.SetActive(!isSmallActive);
+            isSmallActive = !isSmallActive;
+        }
+    }
+
+    
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -93,14 +95,12 @@ public class UIManager : MonoBehaviour {
             if (SmallCluePanels[i].name.Equals(clueType + "Panel")) {
                 currentSmallCluePanel = SmallCluePanels[i];
             }
-                if (pauseMenuPanels[i].name.Equals(clueType + "Panel"))
-                {
-                    currentPauseMenuPanel = pauseMenuPanels[i];
-                }
+            if (pauseMenuPanels[i].name.Equals(clueType + "Panel")) {
+                currentPauseMenuPanel = pauseMenuPanels[i];
+            }
         }
 
-        if (currentBigCluePanel is null || currentSmallCluePanel is null || currentPauseMenuPanel is null)
-            return;
+        if (currentBigCluePanel is null || currentSmallCluePanel is null || currentPauseMenuPanel is null) return;
         
         switch (clueType) {
             case ClueTypes.Campfire:
@@ -141,6 +141,7 @@ public class UIManager : MonoBehaviour {
 }
 
 public class DialogueWrapper {
+    // object used to handle the dialogue from the text files and turn it into an array
     private string DialogueContents { get; }
     public string[] DialogueArray { get; private set; }
 

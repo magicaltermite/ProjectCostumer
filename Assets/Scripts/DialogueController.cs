@@ -93,7 +93,7 @@ public class DialogueController : MonoBehaviour {
     }
 
     public void SetDialogueFile(string file) {
-        filePath = Application.streamingAssetsPath + "/Dialogue/" + file + ".txt";
+        filePath = Application.streamingAssetsPath + file;
         if(hasStarted)
             StartDialogue();
     }

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Outline))]
 public class Interactable : MonoBehaviour {
-    [SerializeField] private DialogueFiles dialogueFile;
     [SerializeField] private ClueTypes clueType;
     
     private Outline outline;
@@ -25,11 +24,12 @@ public class Interactable : MonoBehaviour {
     }
 
     public void Interact() {
+        SoundManager.Instance.PlayPickupSound();
         onInteraction.Invoke();
     }
 
     public void EnableDialogueBox() {
-        UIManager.Instance.EnableDialogueBox(true, dialogueFile.ToString());
+        UIManager.Instance.EnableDialogueBox(true, "/Dialogue/" + clueType + "Dialogue.txt");
     }
 
 
@@ -42,12 +42,4 @@ public class Interactable : MonoBehaviour {
         return clueType;
     }
     
-}
-
-public enum DialogueFiles {
-    TestDialogue,
-    PineConeDialogue,
-    BurntLeavesDialogue,
-    CampfireDialogue,
-    VShapedBurnMarkDialogue
 }
