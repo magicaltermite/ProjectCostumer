@@ -14,7 +14,8 @@ public class UIManager : MonoBehaviour {
     [SerializeField] private Image dialogueBox;
     [SerializeField] private Image[] SmallCluePanels;
     [SerializeField] private Image[] BigCluePanels;
-    
+    [SerializeField] private Image[] pauseMenuPanels; 
+
     [SerializeField] private Slider sensitivityXSlider;
     [SerializeField] private Slider sensitivityYSlider;
     [SerializeField] private Toggle invertX;
@@ -23,7 +24,8 @@ public class UIManager : MonoBehaviour {
     [SerializeField] public Sprite campFound;
     [SerializeField] public Sprite cigFound;
     [SerializeField] public Sprite pineFound;
-    [SerializeField] public Sprite leavesFound; 
+    [SerializeField] public Sprite leavesFound;
+    
     
     [SerializeField] private CameraController cameraController;
 
@@ -32,6 +34,7 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField] public GameObject smallCluesObject;
     [SerializeField] public GameObject bigCluesObject;
+
 
     public bool isSmallActive;
 
@@ -81,6 +84,7 @@ public class UIManager : MonoBehaviour {
     public void UpdateClueUI(ClueTypes clueType) {
         Image currentBigCluePanel = null;
         Image currentSmallCluePanel = null;
+        Image currentPauseMenuPanel = null;
         
         for (int i = 0; i < BigCluePanels.Length; i++) {
             if (BigCluePanels[i].name.Equals(clueType + "Panel")) {
@@ -89,27 +93,35 @@ public class UIManager : MonoBehaviour {
             if (SmallCluePanels[i].name.Equals(clueType + "Panel")) {
                 currentSmallCluePanel = SmallCluePanels[i];
             }
+                if (pauseMenuPanels[i].name.Equals(clueType + "Panel"))
+                {
+                    currentPauseMenuPanel = pauseMenuPanels[i];
+                }
         }
 
-        if (currentBigCluePanel is null || currentSmallCluePanel is null)
+        if (currentBigCluePanel is null || currentSmallCluePanel is null || currentPauseMenuPanel is null)
             return;
         
         switch (clueType) {
             case ClueTypes.Campfire:
                 currentBigCluePanel.GetComponent<Image>().sprite = campFound;
                 currentSmallCluePanel.GetComponent<Image>().sprite = campFound;
+                currentPauseMenuPanel.GetComponent<Image>().sprite = campFound;
                 break;
             case ClueTypes.BurntLeaves:
                 currentBigCluePanel.GetComponent<Image>().sprite = leavesFound;
                 currentSmallCluePanel.GetComponent<Image>().sprite = leavesFound;
+                currentPauseMenuPanel.GetComponent <Image>().sprite = leavesFound;
                 break;
             case ClueTypes.PineCone:
                 currentBigCluePanel.GetComponent<Image>().sprite = pineFound;
                 currentSmallCluePanel.GetComponent<Image>().sprite = pineFound;
+                currentPauseMenuPanel.GetComponent<Image>().sprite = pineFound;
                 break;
             case ClueTypes.Cigarette:
                 currentBigCluePanel.GetComponent<Image>().sprite = cigFound;
                 currentSmallCluePanel.GetComponent<Image>().sprite = cigFound;
+                currentPauseMenuPanel.GetComponent<Image>().sprite = cigFound;
                 break;
             default:
                 throw new Exception("Clue type does not exist");
