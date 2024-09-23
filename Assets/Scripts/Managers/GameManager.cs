@@ -5,9 +5,6 @@ using Cursor = UnityEngine.Cursor;
 
 namespace Managers {
 public class GameManager : MonoBehaviour {
-    [SerializeField] private GameObject uiManager;
-    [SerializeField] private GameObject soundManager;
-    
     public bool isPaused { get; set; }
     
     private int clueCounter;
@@ -62,14 +59,8 @@ public class GameManager : MonoBehaviour {
 
     // For controlling the choice in the choice scene
     public void PickChoice(bool correctChoice) {
-        Debug.Log("Are these buttons being pressed?");
-        if (correctChoice) {
-            UIManager.Instance.EnableDialogueBox(true, "/Dialogue/ChoiceDialogueCorrect.txt");
-            LoadScene("TestEndScene");
-        }
-        else {
-            UIManager.Instance.EnableDialogueBox(true, "/Dialogue/ChoiceDialogueWrong.txt");
-        }
+        UIManager.Instance.EnableDialogueBox(true,
+            correctChoice ? "/Dialogue/ChoiceDialogueCorrect.txt" : "/Dialogue/ChoiceDialogueWrong.txt");
     }
 
 }

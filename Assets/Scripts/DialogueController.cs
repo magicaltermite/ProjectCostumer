@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour {
     public static DialogueController Instance { get; private set; }
+    public bool ChoiceDialogueDone { get; private set; } // this is an ugly solution for making the choice work
     
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private float textSpeed;
@@ -84,6 +85,10 @@ public class DialogueController : MonoBehaviour {
             textBox.text = string.Empty;
             gameObject.SetActive(false);
             GameManager.Instance.IncrementClueCounter();
+            if (ChoiceDialogueDone) {
+                // This is part of making the choice scene load the correct scene after the dialogue is done 
+                GameManager.Instance.LoadScene("TestEndScene");
+            }
         }
     }
 
@@ -96,6 +101,10 @@ public class DialogueController : MonoBehaviour {
         filePath = Application.streamingAssetsPath + file;
         if(hasStarted)
             StartDialogue();
+        // this is an ugly solution for ensuring that the dialogue is done, but I think I will have to rewrite large portions of the dialogue script otherwise
+        if (file.Equals("/Dialogue/ChoiceDialogueCorrect.txt")) {
+            ChoiceDialogueDone = true;
+        }
     }
     
 }
