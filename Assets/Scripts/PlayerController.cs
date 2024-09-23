@@ -34,8 +34,7 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (!GameManager.Instance.isPaused)
-        {
+        if (!GameManager.Instance.isPaused) {
             MovePlayer();
         }
         
@@ -64,7 +63,6 @@ public class PlayerController : MonoBehaviour {
             animator.SetBool(IsWalking, false);
         }
         
-        Debug.Log("Ground check: " + GroundCheck());
         if (Input.GetButtonDown("Jump") && GroundCheck()) {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * Gravity);
             animator.SetBool(IsJumping, true);
@@ -82,8 +80,9 @@ public class PlayerController : MonoBehaviour {
         return Physics.SphereCast(originTransform.position, raycastRadius, -originTransform.up, out hit, raycastDistance);
     }
 
-    private void OnDrawGizmos() {
-        Transform originTransform = raycastOrigin.transform;
-        Gizmos.DrawWireSphere(originTransform.position - originTransform.up * raycastDistance, raycastRadius);
-    }
+    // For debugging
+    //private void OnDrawGizmos() {
+    //    Transform originTransform = raycastOrigin.transform;
+    //    Gizmos.DrawWireSphere(originTransform.position - originTransform.up * raycastDistance, raycastRadius);
+    //}
 }

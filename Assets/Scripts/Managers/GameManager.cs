@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour {
     public void IncrementClueCounter() {
         clueCounter++;
 
-        if (clueCounter >= 3) {
-            LoadScene("TestEndScene", false);
+        if (clueCounter >= 4) {
+            LoadScene("ChoiceScene", false);
         }
     }
 
