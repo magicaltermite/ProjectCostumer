@@ -1,3 +1,5 @@
-This is a pine cone;
-It is burnt on one side, but not the other;
-this indicates the direction from which the fire came
+Howard: “Is there something on the ground?”;
+Barnaby picks up the cigarette bud.;
+Barnaby: “This seems to be a cigarette bud. A cigarette is something humans smoke. cigarettes are lit on fire, hmm… maybe this was a possible fire starter?”;
+Howard: “How could it start a fire? It's so small! and looks like it has been stomped on.?”;
+Barnaby: “That does not mean that the fire has been put out.”

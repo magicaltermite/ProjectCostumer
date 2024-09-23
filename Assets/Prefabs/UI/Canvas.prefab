@@ -4106,10 +4106,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7122894242113910427, guid: 224416d97ab136543b5c2448fd384c0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7876238943381658409, guid: 224416d97ab136543b5c2448fd384c0b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Pausing
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912058449955511263, guid: 224416d97ab136543b5c2448fd384c0b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8912058449955511263, guid: 224416d97ab136543b5c2448fd384c0b,
         type: 3}

@@ -1,3 +1,4 @@
-This is a pine cone;
-It is burnt on one side, but not the other;
-this indicates the direction from which the fire came
+Howard: “What is that thing over there?;
+Barnaby: “Looks like a pine cone. But only one side is burned. I wonder”;
+Howard: “What happened? Why is only one side burned?”;
+Barnaby: “Hmm I am pretty sure it is because the fire came from the burnt side. Wildfires spread with the wind”
