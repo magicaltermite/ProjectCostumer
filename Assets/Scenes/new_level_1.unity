@@ -1739,6 +1739,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -162.381
       objectReference: {fileID: 0}
+    - target: {fileID: 3938750444792276161, guid: 84257aaa7f989ff49b10f671fad931e3,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4607645090479380289, guid: 84257aaa7f989ff49b10f671fad931e3,
         type: 3}
       propertyPath: m_Name
@@ -2568,6 +2573,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 20.985
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7a51b3cd50a9f364fb05473e360934da,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a51b3cd50a9f364fb05473e360934da,
         type: 3}
       propertyPath: m_Name
@@ -2646,6 +2656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -78.18298
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5adbc2f4d9d0f8f47b3e5be39337ce08,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5adbc2f4d9d0f8f47b3e5be39337ce08,
         type: 3}
@@ -6093,6 +6108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -68.21701
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5adbc2f4d9d0f8f47b3e5be39337ce08,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5adbc2f4d9d0f8f47b3e5be39337ce08,
         type: 3}
@@ -10102,6 +10122,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 21.504
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7a51b3cd50a9f364fb05473e360934da,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a51b3cd50a9f364fb05473e360934da,
         type: 3}
       propertyPath: m_Name
@@ -11140,6 +11165,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -174.058
       objectReference: {fileID: 0}
+    - target: {fileID: 3938750444792276161, guid: 84257aaa7f989ff49b10f671fad931e3,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4607645090479380289, guid: 84257aaa7f989ff49b10f671fad931e3,
         type: 3}
       propertyPath: m_Name
@@ -12116,6 +12146,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 104.433
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5adbc2f4d9d0f8f47b3e5be39337ce08,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5adbc2f4d9d0f8f47b3e5be39337ce08,
         type: 3}
       propertyPath: m_Name
@@ -12277,6 +12312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: weeds short
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394860833295326006, guid: 1ea0dc081e7b76343a7e30c8df086bb0,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13349,6 +13389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.238
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724217674069748442, guid: 8b2c91964a0adf743affcf5b243029ca,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15562,6 +15607,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 600097977287885315, guid: 77cd4adc0392b894abdc3bb0f72b7c5c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3767056564690662900, guid: 77cd4adc0392b894abdc3bb0f72b7c5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15621,6 +15671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176458703955617064, guid: 77cd4adc0392b894abdc3bb0f72b7c5c,
+        type: 3}
+      propertyPath: m_RendererIndex
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
