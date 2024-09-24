@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/new_level_1.unity
     guid: 76217cbc5178a8947822a40408609c1d
   - enabled: 1
-    path: Assets/Scenes/ChoiceScene.unity
-    guid: 411ce56cde4b7b941bfa314c7e700fd6
+    path: Assets/Scenes/new_choice_scene.unity
+    guid: 31044427bc50d3b4ba8693657c09880c
   - enabled: 1
     path: Assets/Scenes/TestEndScene.unity
     guid: 68b7549ff16c5384d9d87786b14192ea

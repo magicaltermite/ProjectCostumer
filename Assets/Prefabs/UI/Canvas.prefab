@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 6248966197970476}
   - component: {fileID: 1499601608859344849}
   m_Layer: 5
-  m_Name: BurnMarkPanel
+  m_Name: CigarettePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 2790627970136204169}
   - component: {fileID: 2650598594263464644}
   m_Layer: 5
-  m_Name: BurnMarkPanel
+  m_Name: CigarettePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 1118208337883214619}
   - component: {fileID: 7555564451757579216}
   m_Layer: 5
-  m_Name: BurnMarkPanel
+  m_Name: CigarettePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 175.84784, y: 0, z: 182.12708, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3013,7 +3013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2779935246890581839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3029,10 +3029,10 @@ RectTransform:
   - {fileID: 2168024077687397079}
   m_Father: {fileID: 5204090558876013430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: -200, y: -600}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -279.92352}
+  m_SizeDelta: {x: 1320, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5125747793619869718
 CanvasRenderer:
@@ -3055,7 +3055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.9607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.46666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

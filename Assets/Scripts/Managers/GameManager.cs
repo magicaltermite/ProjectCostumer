@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
         Debug.Log(clueCounter);
 
         if (clueCounter >= 4) {
-            LoadScene("ChoiceScene", false);
+            LoadScene("new_choice_scene", false);
         }
     }
 
