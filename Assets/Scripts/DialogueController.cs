@@ -19,6 +19,7 @@ public class DialogueController : MonoBehaviour {
     private string[] lines;
     private string filePath;
     private bool hasStarted; // This is a clunky solution, but I'm having some problems with the dialogue working correctly more than once
+    private bool isClue;
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -91,9 +92,12 @@ public class DialogueController : MonoBehaviour {
             if (SceneManager.GetActiveScene().name.Equals("new_level_1")) {
                 GameManager.Instance.PutOwlOnHead();
             }
+
+            if (isClue) {
+                GameManager.Instance.IncrementClueCounter();
+            }
             
             gameObject.SetActive(false);
-            GameManager.Instance.IncrementClueCounter();
             
             if (ChoiceDialogueDone) {
                 // This is part of making the choice scene load the correct scene after the dialogue is done 
@@ -115,6 +119,10 @@ public class DialogueController : MonoBehaviour {
         if (file.Equals("/Dialogue/ChoiceDialogueCorrect.txt")) {
             ChoiceDialogueDone = true;
         }
+    }
+
+    public void IsThisAClue(bool isClue) {
+        this.isClue = isClue;
     }
     
 }

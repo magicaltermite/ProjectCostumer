@@ -78,9 +78,10 @@ public class UIManager : MonoBehaviour {
         pickupPrompt.gameObject.SetActive(isEnabled);
     }
 
-    public void EnableDialogueBox(bool isEnabled, string file) {
+    public void EnableDialogueBox(bool isEnabled, bool isClue, string file) {
         dialogueBox.gameObject.SetActive(isEnabled);
         DialogueController.Instance.SetDialogueFile(file);
+        DialogueController.Instance.IsThisAClue(isClue);
     }
 
     public void UpdateClueUI(ClueTypes clueType) {

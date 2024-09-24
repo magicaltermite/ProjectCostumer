@@ -29,7 +29,7 @@ public class Interactable : MonoBehaviour {
     }
 
     public void EnableDialogueBox() {
-        UIManager.Instance.EnableDialogueBox(true, "/Dialogue/" + clueType + "Dialogue.txt");
+        UIManager.Instance.EnableDialogueBox(true, true, "/Dialogue/" + clueType + "Dialogue.txt");
     }
 
 

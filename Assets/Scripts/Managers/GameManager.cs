@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour {
 
     public void IncrementClueCounter() {
         clueCounter++;
+        Debug.Log(clueCounter);
 
         if (clueCounter >= 4) {
             LoadScene("ChoiceScene", false);
@@ -69,19 +70,19 @@ public class GameManager : MonoBehaviour {
     }
 
     private void IntroDialogue(string filePath) {
-        UIManager.Instance.EnableDialogueBox(true, filePath);
+        UIManager.Instance.EnableDialogueBox(true, false, filePath);
         
     }
 
     public void ChoiceSceneIntro() {
-        UIManager.Instance.EnableDialogueBox(true, "/Dialogue/ChoiceIntroDialogue.txt");
+        UIManager.Instance.EnableDialogueBox(true, false, "/Dialogue/ChoiceIntroDialogue.txt");
     }
 
     
     
     // For controlling the choice in the choice scene
     public void PickChoice(bool correctChoice) {
-        UIManager.Instance.EnableDialogueBox(true,
+        UIManager.Instance.EnableDialogueBox(true, false,
             correctChoice ? "/Dialogue/ChoiceDialogueCorrect.txt" : "/Dialogue/ChoiceDialogueWrong.txt");
     }
 
