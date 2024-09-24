@@ -5,10 +5,12 @@ using System.IO;
 using Managers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueController : MonoBehaviour {
     public static DialogueController Instance { get; private set; }
     public bool ChoiceDialogueDone { get; private set; } // this is an ugly solution for making the choice work
+    public bool DialogueIsRunning { get; private set; }
     
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private float textSpeed;
@@ -31,6 +33,7 @@ public class DialogueController : MonoBehaviour {
         textBox.text = string.Empty;
         StartDialogue();
         hasStarted = true;
+        DialogueIsRunning = true;
     }
 
     private void Update() {
@@ -83,8 +86,15 @@ public class DialogueController : MonoBehaviour {
         }
         else {
             textBox.text = string.Empty;
+            DialogueIsRunning = false; // this is for allowing objects to react to the dialogue ending, such as the buttons in the choice scene
+            
+            if (SceneManager.GetActiveScene().name.Equals("new_level_1")) {
+                GameManager.Instance.PutOwlOnHead();
+            }
+            
             gameObject.SetActive(false);
             GameManager.Instance.IncrementClueCounter();
+            
             if (ChoiceDialogueDone) {
                 // This is part of making the choice scene load the correct scene after the dialogue is done 
                 GameManager.Instance.LoadScene("TestEndScene");

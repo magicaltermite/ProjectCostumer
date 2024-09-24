@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -6,7 +7,11 @@ using Cursor = UnityEngine.Cursor;
 namespace Managers {
 public class GameManager : MonoBehaviour {
     public bool isPaused { get; set; }
-    
+    [SerializeField] private bool hasIntroDialogue;
+    [SerializeField] private string filePath;
+    [SerializeField] private GameObject owlInField;
+    [SerializeField] private GameObject owlOnHead;
+
     private int clueCounter;
 
     public static GameManager Instance { get; private set; }
@@ -19,7 +24,13 @@ public class GameManager : MonoBehaviour {
             Instance = this;
         }
     }
-    
+
+    private void Start() {
+        if (hasIntroDialogue) {
+            IntroDialogue(filePath);
+        }
+    }
+
     public void Update() {
         if (!isPaused && Input.GetKeyDown(KeyCode.Escape)) {
             Pausing(true);
@@ -27,6 +38,7 @@ public class GameManager : MonoBehaviour {
         else if (isPaused && Input.GetKeyDown(KeyCode.Escape)) {
             Pausing(false);
         }
+        
     }
 
     public void IncrementClueCounter() {
@@ -56,11 +68,26 @@ public class GameManager : MonoBehaviour {
         UIManager.Instance.PauseGame(isPaused);
     }
 
+    private void IntroDialogue(string filePath) {
+        UIManager.Instance.EnableDialogueBox(true, filePath);
+        
+    }
 
+    public void ChoiceSceneIntro() {
+        UIManager.Instance.EnableDialogueBox(true, "/Dialogue/ChoiceIntroDialogue.txt");
+    }
+
+    
+    
     // For controlling the choice in the choice scene
     public void PickChoice(bool correctChoice) {
         UIManager.Instance.EnableDialogueBox(true,
             correctChoice ? "/Dialogue/ChoiceDialogueCorrect.txt" : "/Dialogue/ChoiceDialogueWrong.txt");
+    }
+
+    public void PutOwlOnHead() {
+        owlInField.SetActive(false);
+        owlOnHead.SetActive(true);
     }
 
 }

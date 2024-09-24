@@ -1,0 +1,3 @@
+Barnaby: "Now that all clues are gathered, we can figure out what caused the fire!";
+Howard: "But was it the cigarette bud or the campfire that started the flames?";
+Barnaby: "See if you can figure it out!"
