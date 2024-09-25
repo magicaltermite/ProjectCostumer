@@ -104,7 +104,7 @@ public class DialogueController : MonoBehaviour {
             textBox.text = string.Empty;
             DialogueIsRunning = false; // this is for allowing objects to react to the dialogue ending, such as the buttons in the choice scene
             
-            if (SceneManager.GetActiveScene().name.Equals("new_level_1")) {
+            if (SceneManager.GetActiveScene().name.Equals("Oscar_New_Scene")) {
                 GameManager.Instance.PutOwlOnHead();
             }
 
