@@ -2605,6 +2605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260906833306454927, guid: 77cd4adc0392b894abdc3bb0f72b7c5c,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260906833306454927, guid: 77cd4adc0392b894abdc3bb0f72b7c5c,
+        type: 3}
       propertyPath: cameraTarget
       value: 
       objectReference: {fileID: 673349932}
@@ -2631,7 +2636,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2037143490}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b42a0fdb8c6ee488ee361979e13385, type: 3}
   m_Name: 
