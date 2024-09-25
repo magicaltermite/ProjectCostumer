@@ -1,2 +1,5 @@
-It is indeed the camp fire;
-something something about how the clues relate
+Barnaby: “Yes, you’re right!”;
+Howard: “As Barnaby said earlier, the campfire wasn't extinguishing properly!”;
+Barnaby: “They left some ashes burning, and the wind scattered them everywhere.”;
+Howard: “The leaves were blown the same way as the fire.”;
+Barnaby: “You pick things up quickly, Howard, but don't forget about the pine cone - only the part facing the campfire got burned.”

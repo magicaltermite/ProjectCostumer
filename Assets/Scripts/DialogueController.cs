@@ -1,11 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using Managers;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class DialogueController : MonoBehaviour {
     public static DialogueController Instance { get; private set; }
@@ -14,6 +18,14 @@ public class DialogueController : MonoBehaviour {
     
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private float textSpeed;
+   
+    [Header("SpeakerImage")]
+    [SerializeField] private Image speakerPanel;
+    [SerializeField] private Sprite baseImage; // for showing the dialogue image
+    [SerializeField] private Sprite barnabyImage;
+    [SerializeField] private Sprite howardImage;
+    [SerializeField] private Sprite howardBarnabyImage;
+
 
     private int index;
     private string[] lines;
@@ -73,6 +85,8 @@ public class DialogueController : MonoBehaviour {
     }
 
     private IEnumerator TypeLine() {
+        ChangeSpeakerImage(lines[index].Substring(0, lines[index].IndexOf(":", StringComparison.Ordinal)));
+            
         foreach (char c in lines[index].ToCharArray()) {
             textBox.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -80,6 +94,7 @@ public class DialogueController : MonoBehaviour {
     }
 
     private void NextLine() {
+
         if (index < lines.Length - 1) {
             index++;
             textBox.text = string.Empty;
@@ -104,9 +119,9 @@ public class DialogueController : MonoBehaviour {
                 GameManager.Instance.LoadScene("TestEndScene");
             }
         }
+
     }
-
-
+    
     private void PopulateLines(string[] linesToShow) {
         lines = linesToShow;
     }
@@ -123,6 +138,20 @@ public class DialogueController : MonoBehaviour {
 
     public void IsThisAClue(bool isClue) {
         this.isClue = isClue;
+    }
+
+    private void ChangeSpeakerImage(string name) {
+        switch (name.Trim()) {
+            case "Barnaby":
+                speakerPanel.sprite = barnabyImage;
+                break;
+            case "Howard":
+                speakerPanel.sprite = howardImage;
+                break;
+            default:
+                speakerPanel.sprite = baseImage;
+                break;
+        }
     }
     
 }

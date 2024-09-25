@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float movementSpeed = 0.05f;
     [SerializeField] private float rotationSpeed = 1f;
     [SerializeField] private float jumpHeight = 5f;
+    [SerializeField] private float fallSpeed = 6;
     
     [Header("Raycast information")]
     [SerializeField] private Camera mainCamera;
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour {
             animator.SetBool(IsJumping, true);
         }
         
-        playerVelocity.y += Gravity * 4 * Time.deltaTime;
+        playerVelocity.y += Gravity * fallSpeed * Time.deltaTime;
         charController.Move(playerVelocity * Time.deltaTime);
     }
 

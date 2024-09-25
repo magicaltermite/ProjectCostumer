@@ -6731,21 +6731,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 307477517931331656, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: CigarettePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1298263754201102050, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: CigarettePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3085757213153909141, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_Name
-      value: CigarettePanel
-      objectReference: {fileID: 0}
     - target: {fileID: 4573089027822364763, guid: 0963c5c4e0613974da81cfad08d24cad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6856,22 +6841,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1406715487}
-    - target: {fileID: 6894267059952743281, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_text
-      value: 'Press F To Pickup
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 7088431278501437702, guid: 0963c5c4e0613974da81cfad08d24cad,
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853811841608308688, guid: 0963c5c4e0613974da81cfad08d24cad,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8756,11 +8729,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3745597059828386895, guid: 4824c9920c255014282b6b681030aee2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6671479434897186167, guid: 4824c9920c255014282b6b681030aee2,
         type: 3}

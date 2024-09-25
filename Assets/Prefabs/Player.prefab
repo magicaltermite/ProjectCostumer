@@ -50,7 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 30
   rotationSpeed: 10
-  jumpHeight: 10
+  jumpHeight: 14
+  fallSpeed: 6
   mainCamera: {fileID: 0}
   raycastOrigin: {fileID: 8055869062934246858}
 --- !u!143 &526907768840411805
@@ -140,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 8239419773576762159, guid: 9f6c32655ca01804b98b4451885fabf8,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8724488485713414549, guid: 9f6c32655ca01804b98b4451885fabf8,
         type: 3}
