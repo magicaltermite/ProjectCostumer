@@ -1,7 +1,8 @@
 Barnaby: “I see the remains of a campfire. Surrounding the campfire I see burned leaves, burned wood and dry grass”;
 Howard: “Is this the reason for the fire?”;
-Barnaby: “It could be the reason for the fire. It looks like the humans that were camping here did not put out the fire properly.”;
+Barnaby: “It could be the reason for the fire. It looks like the humans that were camping here did not put out the fire properly”;
 Howard: “How so?”;
-Barnaby: “When you go camping it is important to put out the fire properly. A good way to put out the campfire is to put water on it.”;
-Barnaby: “While pouring water on it you can also shovel some sand on it. After that you can stir the ashes and keep on doing that till everything is nice and cold.”;
-Barnaby: “You know everything is cold when the embers, which is the hot ashes, stop hissing”
+Barnaby: “When you go camping it is important to put out the fire properly.”;
+Barnaby: “A good way to put out the campfire is to put water on it. While pouring water on it you can also shovel some sand on it.”;
+Barnaby: “After that you can stir the ashes and keep on doing that till everything is nice and cold.”;
+Barnaby: “You know everything is cold when the embers, which is the hot ashes, stop hissing”;

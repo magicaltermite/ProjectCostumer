@@ -1,5 +1,5 @@
 Howard: ”Barnaby! The fire has ruined so much of the forest already. Thank you for putting out the fire. The fire destroyed my home and injured my wing”;
-Barnaby: “I need to find out what happened. I do not know what happened, do you know anything”;
+Barnaby: “I need to find out what happened. I do not know what happened, do you know anything?”;
 Howard: “I saw some humans at a campsite somewhere here. They ran right before the fire started”;
 Barnaby: “Let us see if we can find them and find out what happened”;
 Howard: “Good idea! Let me help you”

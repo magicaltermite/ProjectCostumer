@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: bdff5733279624c4f9a7bdd02e42a149
   - enabled: 1
-    path: Assets/Scenes/new_level_1.unity
-    guid: 76217cbc5178a8947822a40408609c1d
+    path: Assets/Scenes/Oscar_New_Scene.unity
+    guid: a257e702e9d3c5b40be55f3b46e62141
   - enabled: 1
     path: Assets/Scenes/new_choice_scene.unity
     guid: 31044427bc50d3b4ba8693657c09880c

@@ -1,3 +1,4 @@
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,9 +10,10 @@ public class SoundManager : MonoBehaviour
     
     private AudioSource audioSource;
     [SerializeField] private AudioSource pickupSource;
-    [SerializeField] private AudioClip[] footStepSounds;
-    
     [SerializeField] private Slider volumeSlider; // Our slider from Unity
+    [SerializeField] private GameObject footstepSoundsHolder;
+    private AudioSource[] footstepAudioSources;
+
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -36,7 +38,7 @@ public class SoundManager : MonoBehaviour
             // If there is a player setting that has been saved, load it. 
             Load();
         }
-
+        footstepAudioSources = footstepSoundsHolder.GetComponents<AudioSource>();
         audioSource = GetComponent<AudioSource>();
     }
     
@@ -47,9 +49,12 @@ public class SoundManager : MonoBehaviour
     }
 
     public void PlayFootStepSound() {
-        AudioClip footStepSound = footStepSounds[Random.Range(0, footStepSounds.Length)];
-        audioSource.clip = footStepSound;
-        audioSource.Play();
+        //AudioClip[] footStepSounds = Resources.LoadAll("", typeof(AudioClip)).Cast<AudioClip>().ToArray();
+        
+        //AudioClip footStepSound = footStepSounds[Random.Range(0, footStepSounds.Length)];
+        footstepAudioSources[Random.Range(0, footstepAudioSources.Length)].Play();
+        //audioSource.clip = footStepSound;
+        //audioSource.Play();
     }
 
     
