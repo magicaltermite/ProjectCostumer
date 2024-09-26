@@ -5,4 +5,4 @@ Howard: “How so?”;
 Barnaby: “When you go camping it is important to put out the fire properly.”;
 Barnaby: “A good way to put out the campfire is to put water on it. While pouring water on it you can also shovel some sand on it.”;
 Barnaby: “After that you can stir the ashes and keep on doing that till everything is nice and cold.”;
-Barnaby: “You know everything is cold when the embers, which is the hot ashes, stop hissing”;
+Barnaby: “You know everything is cold when the embers, which is the hot ashes, stop hissing”

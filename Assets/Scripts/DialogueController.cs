@@ -94,7 +94,6 @@ public class DialogueController : MonoBehaviour {
     }
 
     private void NextLine() {
-
         if (index < lines.Length - 1) {
             index++;
             textBox.text = string.Empty;

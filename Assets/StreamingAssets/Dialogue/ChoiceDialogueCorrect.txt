@@ -1,6 +1,8 @@
 Barnaby: “You are correct! The campfire you found was the reason for the fire”;
 Howard: “The humans did not put out the fire like they should have done”;
 Barnaby: “Together we gathered the clues to solve the mystery of the wildfire. You did a really good job finding these clues!”;
-Howard: “I want to explain it to you Barnaby to make sure I understand how we solved it. We found the half burned pine cone and that showed us that the fire had spread in a specific way because of the wind. The dry leaves showed us the same thing.”; 
+Howard: “I want to explain it to you Barnaby to make sure I understand how we solved it.”; 
+Howard: “We found the half burned pine cone and that showed us that the fire had spread in a specific way because of the wind.”; 
+Howard: “The dry leaves showed us the same thing.”; 
 Howard: “That way we knew we were going the correct way. At the end we found the campfire!”;
 Barnaby: “You are indeed correct Howard! And YOU helped us solve it! Good job. Together we can prevent wildfires!”
