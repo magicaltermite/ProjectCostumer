@@ -48,6 +48,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayFootStepSound() {
         AudioClip[] footStepSounds = Resources.LoadAll("", typeof(AudioClip)).Cast<AudioClip>().ToArray();
+        
         AudioClip footStepSound = footStepSounds[Random.Range(0, footStepSounds.Length)];
         audioSource.clip = footStepSound;
         audioSource.Play();

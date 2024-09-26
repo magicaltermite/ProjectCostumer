@@ -94,6 +94,7 @@ public class DialogueController : MonoBehaviour {
     }
 
     private void NextLine() {
+
         if (index < lines.Length - 1) {
             index++;
             textBox.text = string.Empty;
@@ -115,7 +116,7 @@ public class DialogueController : MonoBehaviour {
             
             if (ChoiceDialogueDone) {
                 // This is part of making the choice scene load the correct scene after the dialogue is done 
-                GameManager.Instance.LoadScene("TestEndScene");
+                GameManager.Instance.LoadScene("EndComic");
             }
         }
 
